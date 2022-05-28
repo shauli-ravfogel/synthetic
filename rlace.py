@@ -21,6 +21,7 @@ def get_entropy(y):
     
     
 def init_classifier():
+    return sklearn.linear_model.LogisticRegression(max_iter=5000)
 
     return SGDClassifier(loss=EVAL_CLF_PARAMS["loss"], fit_intercept=True, max_iter=EVAL_CLF_PARAMS["max_iter"], tol=EVAL_CLF_PARAMS["tol"], n_iter_no_change=EVAL_CLF_PARAMS["iters_no_change"],
                         n_jobs=64, alpha=EVAL_CLF_PARAMS["alpha"])
